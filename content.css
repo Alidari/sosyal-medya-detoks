@@ -1,0 +1,12 @@
+article[data-gta6="blur"] { position: relative !important; }
+article[data-gta6="blur"] > *:not(.gta6-overlay) { filter: blur(18px) saturate(.6); pointer-events: none; user-select: none; }
+.gta6-overlay { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; background: rgba(0,0,0,.35); }
+.gta6-pill { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 12px 22px; border-radius: 14px;
+  background: linear-gradient(115deg, #2a0f3d 0%, #5b1a5e 35%, #c2185b 70%, #ff7a3d 100%);
+  color: #fff; font: 14px/1.3 "Segoe UI", system-ui, sans-serif; text-align: center; }
+.gta6-pill b { font-size: 15px; font-weight: 800; }
+.gta6-pill span { font-size: 12px; color: rgba(255,255,255,.75); }
+.gta6-overlay:hover .gta6-pill { filter: brightness(1.08); }
+.gta6-who { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.85); padding-bottom: 6px; margin-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,.2); max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

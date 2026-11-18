@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Sosyal Medya Detoksu",
+  "version": "1.1",
+  "description": "x.com'a girmeden önce sana detoksta olduğunu hatırlatır.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.x.com/*",
+    "*://x.com/*",
+    "*://*.twitter.com/*",
+    "*://twitter.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sosyal Medya Detoksu"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "warning.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://x.com/*",
+        "*://*.x.com/*",
+        "*://twitter.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

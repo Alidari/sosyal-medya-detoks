@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Detoks</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: #000; color: #e7e9ea; overflow: hidden;
+         font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
+         display: flex; align-items: center; justify-content: center; }
+  body::before { content: ""; position: fixed; inset: 0; pointer-events: none;
+         background:
+           radial-gradient(ellipse 55% 45% at 85% 100%, rgba(255,61,139,.08), transparent 70%),
+           radial-gradient(ellipse 45% 40% at 10% 0%, rgba(124,58,237,.07), transparent 70%); }
+  .spoiler { position: relative; margin: 0 0 36px; padding: 22px 24px; border-radius: 18px; overflow: hidden;
+         background: linear-gradient(115deg, #2a0f3d 0%, #5b1a5e 35%, #c2185b 70%, #ff7a3d 100%);
+         box-shadow: 0 0 0 1px rgba(255,255,255,.06); }
+  .spoiler::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+         background: none; }
+  .spoiler .sun { position: absolute; right: -40px; bottom: -70px; width: 190px; height: 190px; border-radius: 50%;
+         background: linear-gradient(180deg, #ffd166 0%, #ff8a3d 45%, #ff3d8b 100%); opacity: .45;
+         -webkit-mask: repeating-linear-gradient(180deg, #000 0 14px, transparent 14px 20px);
+                 mask: repeating-linear-gradient(180deg, #000 0 14px, transparent 14px 20px); }
+  .spoiler .kicker { position: relative; font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase;
+         color: rgba(255,255,255,.7); margin-bottom: 6px; }
+  .spoiler .big { position: relative; font-size: 26px; line-height: 1.15; font-weight: 800; letter-spacing: -.02em; color: #fff;
+         max-width: 380px; }
+  .spoiler .small { position: relative; font-size: 14px; color: rgba(255,255,255,.75); margin-top: 8px; max-width: 300px; }
+  .wrap { position: relative; width: 100%; max-width: 560px; padding: 0 32px; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; letter-spacing: .08em;
+         text-transform: uppercase; color: #71767b; border: 1px solid #2f3336; border-radius: 999px;
+         padding: 6px 14px; margin-bottom: 24px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: #ff3d8b; box-shadow: 0 0 10px #ff3d8b;
+         animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .3; } }
+  h1 { font-size: 46px; line-height: 1.02; font-weight: 800; letter-spacing: -.035em; margin: 0 0 22px; }
+  h1 span { color: #71767b; }
+  p { font-size: 18px; line-height: 1.5; color: #71767b; margin: 0 0 40px; max-width: 440px; }
+  .stat { display: flex; align-items: baseline; gap: 14px; padding: 20px 0; margin-bottom: 40px;
+          border-top: 1px solid #2f3336; border-bottom: 1px solid #2f3336; }
+  .stat b { font-size: 44px; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .stat small { font-size: 15px; color: #71767b; }
+  .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+  button { font: inherit; font-size: 16px; font-weight: 700; padding: 15px 28px; border-radius: 999px;
+           cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+  #back { background: #eff3f4; color: #0f1419; border: 1px solid #eff3f4; }
+  #back:hover { background: #d7dbdc; }
+  #back { background: linear-gradient(90deg, #ff3d8b, #ff8a3d); color: #fff; border-color: transparent; }
+  #back:hover { filter: brightness(1.1); background: linear-gradient(90deg, #ff3d8b, #ff8a3d); }
+  #go { background: transparent; color: #71767b; border: 1px solid #2f3336; }
+  #go:hover { color: #e7e9ea; border-color: #536471; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="tag"><span class="dot"></span>Detoks aktif</div>
+    <div class="spoiler">
+      <div class="sun"></div>
+      <div class="kicker">Spoiler tehlikesi</div>
+      <div class="big">GTA 6 spoiler'ı yiyebilirsin.</div>
+      <div class="small">Akışta bir video, bir alıntı, bir ekran görüntüsü… ve sürpriz biter.</div>
+    </div>
+    <h1>Şu an sosyal medya detoksundasın.<br><span>Uzak durmanı öneriyoruz.</span></h1>
+    <p>Akış seni bekleyebilir. Bu birkaç dakika senin.</p>
+    <div class="stat"><b id="count">–</b><small id="countLabel">bugünkü deneme</small></div>
+    <div class="buttons">
+      <button id="back">Vazgeç</button>
+      <button id="go">Yine de devam et</button>
+    </div>
+  </div>
+  <script src="warning.js"></script>
+</body>
+</html>
