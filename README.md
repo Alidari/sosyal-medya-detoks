@@ -2,6 +2,10 @@
 
 x.com'a girmeden önce seni durduran, akıştaki **GTA 6 spoiler'larını** bulanıklaştıran küçük bir Chrome/Edge eklentisi.
 
+<p align="center">
+  <img src="screenshots/warning.png" alt="Detoks uyarı ekranı" width="720">
+</p>
+
 ## Ne yapıyor?
 
 **1. Detoks uyarısı**
@@ -14,6 +18,10 @@ x.com'u (ve twitter.com'u) açtığında sayfa yüklenmeden önce karanlık bir 
 
 **2. GTA 6 spoiler kalkanı**
 Akışta GTA 6 ile ilgili bir tweet geçerse bulanıklaştırılır, üzerinde hesabın adı ve “GTA 6 spoiler olabilir — göstermek için tıkla” etiketi görünür.
+
+<p align="center">
+  <img src="screenshots/blur.png" alt="Bulanıklaştırılmış GTA 6 tweet'i" width="448">
+</p>
 
 Yakalanan kelimeler:
 - Oyun: `GTA 6`, `GTA6`, `GTA VI`, `Grand Theft Auto 6`, `#GTA6`
